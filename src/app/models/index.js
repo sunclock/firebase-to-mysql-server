@@ -20,6 +20,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 // routes 사용
-db.users = require("./user.model.js")(sequelize, Sequelize);
+db.testers = require("./tester.model.js")(sequelize, Sequelize);
 
 module.exports = db;

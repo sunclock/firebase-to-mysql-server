@@ -1,14 +1,14 @@
 const db = require("../models");
-const User = db.users;
+const Tester = db.testers;
 const Op = db.Sequelize.Op;
 
-// Create and Save a new User
+// Create and Save a new tester
 exports.create = (req, res) => {
 
-  // Create a User
-  const user = {
+  // Create a tester
+  const tester = {
       age: req.body.age,
-      user_id: req.body.user_id,
+      tester_id: req.body.tester_id,
       keyword: req.body.keyword,
       register_date: req.body.register_date,
       job: req.body.job,
@@ -16,10 +16,10 @@ exports.create = (req, res) => {
       sex: req.body.sex,
       soul_food: req.body.soul_food
   };
-  console.log(user);
+  console.log(tester);
   // Save Tutorial in the database
-  console.log(User);
-  User.create(user)
+  console.log(Tester);
+  Tester.create(tester)
     .then(data => {
       return res.send(data);
     })
