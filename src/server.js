@@ -22,6 +22,9 @@ db.sequelize.sync();
 // });
 
 require("./app/routes/tester.routes")(app);
+require("./app/routes/user.routes")(app);
+require("./app/routes/recommendation.routes")(app);
+require("./app/routes/keyword.routes")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

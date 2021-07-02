@@ -21,5 +21,7 @@ db.sequelize = sequelize;
 
 // routes 사용
 db.testers = require("./tester.model.js")(sequelize, Sequelize);
-
+db.users = require("./user.model.js")(sequelize, Sequelize);
+db.keywords = require("./keyword.model.js")(sequelize, Sequelize);
+db.recommendations = require("./recommendation.model.js")(sequelize, Sequelize);
 module.exports = db;
